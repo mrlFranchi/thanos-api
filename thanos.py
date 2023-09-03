@@ -14,9 +14,9 @@ def get_json():
     # Read data from the TSV file with the specified encoding
     with open(tsv_file, 'r', newline='', encoding='utf-8') as file:
       tsv_data = list(csv.DictReader(file, delimiter='\t'))
-
+    tsv_set = {"items":tsv_data}
     # Return TSV data as JSON
-    return jsonify(tsv_data)
+    return jsonify(tsv_set)
   except UnicodeDecodeError:
     return jsonify({"error": "Unable to decode file due to encoding issues."})
 
