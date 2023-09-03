@@ -5,4 +5,4 @@ Para rodar, execute o comando
 python thanos.py
 ```
 
-e acesse através da url "http://localhost:5000/get_
+e acesse através da url "http://localhost:5000/get_json
