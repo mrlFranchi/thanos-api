@@ -1,11 +1,13 @@
 from flask import Flask, Response, jsonify
+from flask_cors import CORS
 import csv
 
 app = Flask(__name__)
+CORS(app) #enable CORS
 
 @app.route('/get_json')
 def get_json():
-  # Path to your TSV file
+  # Path to TSV file
   tsv_file = 'demo.tsv'
 
   try:
